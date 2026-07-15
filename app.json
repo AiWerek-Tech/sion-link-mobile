@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "SION Link",
+    "slug": "sion-link-mobile",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "scheme": "sionlink",
+    "icon": "./assets/app-icon-safe.png",
+    "newArchEnabled": true,
+    "android": {
+      "package": "tech.aiwerek.sionlink.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-safe.png",
+        "backgroundColor": "#070B24"
+      },
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "CAMERA",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "tech.aiwerek.sionlink.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SION Link menggunakan kamera untuk memindai QR koneksi dari operator.",
+        "NSLocalNetworkUsageDescription": "SION Link mencari dan terhubung ke SION Media pada jaringan lokal gereja.",
+        "NSBonjourServices": ["_sion-link._tcp"],
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Izinkan SION Link memindai QR koneksi.",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#070B24",
+          "image": "./assets/logo.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#070B24",
+            "image": "./assets/logo.png"
+          }
+        }
+      ],
+      "expo-video"
+    ]
+  }
+}
