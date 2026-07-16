@@ -17,6 +17,6 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   logo: { width: 58, height: 58 }, logoCompact: { width: 36, height: 36 },
   name: { color: colors.text, fontSize: 24, fontWeight: '900', letterSpacing: -.7 }, nameCompact: { color: colors.text, fontSize: 19, fontWeight: '900', letterSpacing: -.5 },
-  accent: { color: colors.cyan }, tagline: { color: colors.muted, fontSize: 9, fontWeight: '800', letterSpacing: 1.5, marginTop: 2 }
+  accent: { color: colors.cyanLight }, tagline: { color: colors.muted, fontSize: 9, fontWeight: '800', letterSpacing: 1.5, marginTop: 2 }
 })
 
